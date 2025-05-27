@@ -21,3 +21,16 @@ for(let i = 0; i < frutas.length ; i++) // length é uma propriedade usada para 
 // if(nome.length === 0) {
 //     console.log("O nome está vazio.");
 // }
+
+
+
+
+// -- - --- Funções do array
+// - push - Insere valor  no final do array
+// - pop - Remover último valor do array
+// -- Adicionar valor arrai[x] = 50;
+// - shift - Remover o primeiro valor do array
+// - map - Percorrer o array e criar uma lista duplicada
+// - length - contar elementos do array
+// - splice - Pode apagar um elemento a partir do índice, e inserir elementos
+// - split - tratara a string - desmembrar, separar, etc..
