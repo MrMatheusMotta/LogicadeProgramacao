@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- !-- Menu:
+1 - Adicionar, 2 - listar, 3 - Atualizar - 4 - Remover - 5 - sair
+\n (pula linha) -->
+</head>
+
+<body>
+    <h2>Abra o console do navegador</h2>
+
+    <script>
+        const usuarios = [];
+        function menu() {
+            let opcao;
+            do {
+                opcao = prompt(
+                    "Menu: \n1.Adcionar\n2.Listar\n3.Atualizar\n4.Remover\n5.Sair" // \n QUEBRA LINHA
+                );
+                switch (opcao) {
+                    case "1":
+                        const nome = prompt("Digite o nome do usuário: ")
+                        usuarios.push(nome)
+                        alert("usuário adicionado!")
+                        console.log("Usuário adicionado!")
+                        break
+                    case "2":
+                        console.clear()
+                        if (usuarios.length === 0)
+                            console.log("Nenhum usuário cadastrado!")
+                        else
+                            console.log("Usuários: ")
+                        usuarios.forEach((nome, i) => console.log(`${i} - ${nome}`));
+                        break
+                    case "3":
+                        const indiceAtualizado = prompt("Digite o índice do usuário: ")
+                        if(usuarios[indiceAtualizado]){
+                        const novoNome = prompt("Digite o nome do usuário: ")
+                        usuarios[indiceAtualizado] = novoNome;
+                        alert("Usuário atualizado!")
+                        }else{
+                            alert("Índice inválido!")
+                        }
+                        break
+                    case "4":
+                        const indiceRemover = prompt("Digite um índice a remover: ")
+                        if(usuarios[indiceRemover]){
+                            const removido = usuarios.splice(indiceRemover, 1);
+                            alert(`Removido: ${removido}`)
+                        }else{
+                            alert("Índice inválido!")
+                        }
+                        break
+                    case "5":
+                        alert("Sair...")
+                        break
+                    default:
+                        alert("Opção inválida!")
+                }
+
+            } while (opcao !== "5")
+        }
+        
+        menu();
+
+    </script>
+</body>
+
+</html>
