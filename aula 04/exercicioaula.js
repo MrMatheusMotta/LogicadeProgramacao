@@ -300,8 +300,6 @@ function conversorDeMoeda(){
 
 function antecessorSucessor(){
     let numInt = parseInt(prompt("Digite um número inteiro: "))
-    for(let i = 0 ; i ){
-
-    }
+  
 }
 
