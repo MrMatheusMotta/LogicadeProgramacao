@@ -6,23 +6,20 @@
 // X[2] // índice 2 seria o "q"
 
 
-// const matriz = [
-//     [10, 41, 41],
-//     [20, 45, 47],
-//     [10, 45, 54]
-// ];
 
-// console.log(matriz[0][0]) // primeiro lê linha, segundo lê a coluna
-// console.log(matriz[1][2]) // primeiro lê linha, segundo lê a coluna
+const matriz = [[10, 41, 41],[20, 45, 47],[10, 45, 54]];
+
+console.log(matriz[0][0]) // primeiro lê linha, segundo lê a coluna
+console.log(matriz[1][2]) // primeiro lê linha, segundo lê a coluna
 
 
-// // 1º for percorre a linha
-// for(let linha = 0; linha < matriz.length; linha++){   //length vai descobrir e percorrer a linha completa
-//     // 2º for percorre a coluna
-//     for(let coluna = 0; coluna < matriz.length; coluna++){ //length vai descobrir e percorrer a coluna completa
-//         console.log(`Elemento na posição : [${linha}][${coluna}] é ${matriz[linha][coluna]}`)
-//     }
-// }
+// 1º for percorre a linha
+for(let linha = 0; linha < matriz.length; linha++){   //length vai descobrir e percorrer a linha completa
+    // 2º for percorre a coluna
+    for(let coluna = 0; coluna < matriz.length; coluna++){ //length vai descobrir e percorrer a coluna completa
+        console.log(`Elemento na posição : [${linha}][${coluna}] é ${matriz[linha][coluna]}`)
+    }
+}
 
 const matriz2 = [
     [10, 41, 41, 54, 44],

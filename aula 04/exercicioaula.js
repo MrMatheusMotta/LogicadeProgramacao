@@ -30,14 +30,14 @@ function calcular() {
         valoresACalcular.push(valores)
     }
 
- 
+
     let resultadoSoma = valoresACalcular.reduce((acc, val) => acc + val, 0);
     let resultadoMultiplicacao = valoresACalcular.reduce((acc, val) => acc * val, 1);
 
     alert(`A soma dos números digitados é: ${resultadoSoma}`);
     alert(`A multiplicação dos números digitados é: ${resultadoMultiplicacao}`);
 
-    
+
 
 }
 
@@ -288,7 +288,7 @@ function calcular() {
 // c. Fazer um programa que pergunte um valor em Dólares e apresente o 
 // equivalente em Reais. Considere U$1,00 = R$5,70
 
-function conversorDeMoeda(){
+function conversorDeMoeda() {
 
     let dolares = parseFloat(prompt("VALOR EM US$ :"));
     let conversor = (dolares * 5.7);
@@ -298,8 +298,48 @@ function conversorDeMoeda(){
 // 3. Fazer um programa que pergunte um número inteiro e apresente o seu antecessor e 
 // seu sucessor.
 
-function antecessorSucessor(){
+function antecessorSucessor() {
     let numInt = parseInt(prompt("Digite um número inteiro: "))
-  
+    let antecessor = numInt - 1;
+    let sucessor = numInt + 1;
+
+    document.writeln(`O antecessor de ${numInt} é  ${antecessor} e seu sucessor é ${sucessor}.`)
 }
 
+// 4. Fazer um programa que pergunte o salário de um funcionário e apresente este salário 
+// com um aumento de 15%.
+
+
+function aumentoSalario() {
+    let salario = parseFloat(prompt("Informe seu salário atual : "));
+    let novoSalario = salario + (15 / 100 * salario);
+    document.writeln(`O salário atualizado com aumento de 15% é de R$ ${novoSalario.toFixed(4)},00`)
+}
+
+// 5. Fazer um programa que pergunte uma temperatura ao usuário, em graus Fahrenheit, e 
+// apresente esta temperatura convertida em graus Celsius. A fórmula da conversão é c = 
+// (f – 32) x 5 / 9 , onde c é a temperatura em graus Celsius e f em Fahrenheit
+
+
+function fahrenheitParaCelcius() {
+    let temperatura = parseFloat(prompt("Temperatura em Fahrenheit :"));
+    let fahrenheitParaCelcius = (temperatura - 32) * 5 / 9;
+    document.writeln(`temperatura está : ${fahrenheitParaCelcius.toFixed(2)}ºC`);
+}
+
+// 6. Fazer um algoritmo que pergunte 3 números e apresente a média aritmética entre 
+// estes 3 números.
+
+function mediaAritimetica() {
+
+    let acumulador = 0
+
+    for (let i = 1; i <= 4; i++) {
+        let numeros = parseFloat(prompt(`Informe o ${i}º número`));
+        acumulador += numeros
+    }
+
+    let media = acumulador / 4;
+
+    document.writeln(`A média é = ${media}`)
+}
