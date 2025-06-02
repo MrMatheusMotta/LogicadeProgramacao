@@ -343,3 +343,48 @@ function mediaAritimetica() {
 
     document.writeln(`A média é = ${media}`)
 }
+
+// 7. Fazer um programa que calcule e apresente a quantidade de litros que um automóvel gastará em uma viagem. 
+// O programa deve coletar as seguintes informações: Distância a percorrer na viagem, em quilômetros; qual é o
+// valor do consumo médio do automóvel, em quilômetros por litro.
+
+
+function kmLitros(){
+    let distancia = parseFloat(prompt("Qual a distãncia a ser percorrida em KM?"));
+    let consumoMedioVeiculo = parseFloat(prompt("Qual a média de consumo do seu automível ?"));
+
+    let gastoCombutivel = distancia / consumoMedioVeiculo;
+
+    document.writeln(`Você gastará ${gastoCombutivel}L nesta viagem!`)
+
+}
+
+// 8. Fazer um algoritmo que pergunte 1 número e apresente:
+// a. O próprio número
+// b. O quadrado deste número
+// c. A raiz quadrada deste número
+
+function calculosNum(){
+
+    let num = parseInt(prompt("Digite um número!"));
+    let quadrado = Math.pow(num,2);
+    let raiz = Math.sqrt(num);
+
+    document.writeln(`O número digitado foi ${num} <br> ${num}² = ${quadrado} <br> A raiz quadrada de ${num} é ${raiz}`)
+
+}
+
+// 9. Fazer um algoritmo que efetue o cálculo do valor de uma prestação em atraso, 
+// utilizando a fórmula prestação = valor + (valor x (taxa : 100) x tempo em dias).
+
+function jurosPrestacao(){
+
+    let valorPrestacao = parseFloat(prompt("Digite o valor da prestação em atraso: "));
+    let taxaJuros = parseFloat(prompt("Digite a taxa de juros: "));
+    let diasAtraso = parseInt(prompt("Digite os dias de atraso: "))
+    let calculoJuros = valorPrestacao + (valorPrestacao *(taxaJuros/100)*diasAtraso)
+
+    document.writeln(`De acordo com as informações, o valor corrigido do seu débito é de R$ ${calculoJuros.toFixed(2)}`)
+}
+
+
